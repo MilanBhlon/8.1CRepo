@@ -9,7 +9,7 @@ pipeline{
         }
         stage('Unit & Integration tests'){
             steps{
-                echo "This stage runs unit tests to ensure the code functions as expected & run integration tests to ensure the different components of the appliation. Tools that can be used for this stage are:"
+                echo "This stage runs unit tests to ensure the code functions as expected & run integration tests to ensure the different components of the appliation. Tools that can be used for this stage are:",
                 echo "cypress, selenium, Junit, eggplant, TestComplete, appium, Katalon etc"
             }
         }

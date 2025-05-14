@@ -1,0 +1,49 @@
+pipeline{
+    agent any
+    stages{
+        stage('Build'){
+            steps{
+                echo "This stage builds the code using a build automation tools to compile & package the code. The list of tools are:",
+                echo "npm, Gradle, Maven, sbt, webpack, nant etc"
+            }
+        }
+        stage('Unit & Integration tests'){
+            steps{
+                echo "This stage runs unit tests to ensure the code functions as expected & run integration tests to ensure the different components of the appliation. Tools that can be used for this stage are:"
+                echo "cypress, selenium, Junit, eggplant, TestComplete, appium, Katalon etc"
+            }
+        }
+        stage('Code Analysis'){
+            steps{
+                echo "This stage analyse the code & ensure it meets industry standards. List of code analysing tools are:",
+                echo "SAST Tools - SonarQube, Synk Code",
+                echo "DAST Tools - OWASP Zap, Burp Suite",
+                echo "SCA Tools - Synk, OWASP Dependency-check",
+                echo "IaC Tools - checkov, Terrascan"
+
+            }
+        }
+        stage('Security Scan'){
+            steps{
+                echo "This stage perform a security scan on code to identify vulnerabilities are",
+                echo "Tools that can be used for security scan are: Synk code, OWASP ZAP, Terrascan, Gitleaks etc"
+            }
+        }
+        stage('Deploy to Staging'){
+            steps{
+                echo "Deploy the application to a staging server",
+                echo "example: AWS EC2 instance"
+            }
+        }
+        stage('Integration Tests on Staging'){
+            steps{
+                echo "This stage runs integration tests on the staging environment to ensure the application functions as expected in a production-like environemnt."
+            }
+        }
+         stage('Deploy to Production'){
+            steps{
+                echo "This stage deploy the application to a production server (exampe: AWS EC2 instance)."
+            }
+        }
+    }
+}

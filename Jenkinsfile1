@@ -45,11 +45,17 @@ pipeline {
                 echo "This stage runs integration tests on the staging environment to ensure the application functions as expected in a production-like environment."
             }
         }
-        
+
         stage('Deploy to Production') {
             steps {
                 echo "This stage deploys the application to a production server (example: AWS EC2 instance)."
             }
         }
+       stage('Another stage') {
+            steps {
+                echo "This is for a trail."
+            }
+        }
+
     }
 }

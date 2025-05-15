@@ -51,6 +51,11 @@ pipeline {
                 echo "This stage deploys the application to a production server (example: AWS EC2 instance)."
             }
         }
+        stage('complete') {
+            steps {
+                echo "This is complete stage."
+            }
+        }
 
     }
 }
